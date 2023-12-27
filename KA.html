@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kesehatan</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url('hero-bg.jpg'); /* Ganti 'nama_gambar_anda.jpg' dengan URL gambar latar belakang Anda */
+            background-size: cover; /* Untuk mengisi seluruh layar dengan gambar */
+            background-repeat: no-repeat; /* Untuk mencegah pengulangan gambar latar belakang */
+            background-attachment: fixed; /* Agar gambar latar belakang tetap pada posisi yang sama saat halaman di-scroll */
+            background-color: #f5f5f5; /* Warna latar belakang cadangan jika gambar tidak tersedia */
+        }
+        /* CSS */
+        header img {
+            border-radius: 30%; /* Membuat logo menjadi bulat */
+            width: 10%;
+        }
+        
+
+        header {
+            background-color: #537bb0;
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;  
+            display: flex;     
+        }
+
+        .container{
+            margin-top: 16px;
+            margin-left: 16%;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff5733; /* Warna saat dihover */
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        article {
+            background-color: transparent;
+            opacity: 0.8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: fixed;
+        }
+
+        article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .article-preview p {
+            color: #555;
+        }
+
+        .article-preview a {
+            color: #ff5733;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .article-preview a:hover {
+            color: #333;
+        }
+
+        footer {
+            background-color: #537bb0;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Tombol Chat */
+        button {
+            background-color: #ff5733;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+    <!-- Masukkan kode Watson Assistant di sini -->
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "89ab3523-5148-471c-a863-0bbb4280683b",
+            region: "us-south",
+            serviceInstanceID: "eebadf51-4874-4d65-bf64-04575c48625d",
+            onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+
+        // Fungsi untuk memicu Watson Assistant ketika tombol diklik
+        function openChat() {
+            const chatElement = document.querySelector(".IBMChat-container");
+            chatElement.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logopuskesmas-removebg-preview.png" alt="Logo Kesehatan"> <!-- Ganti 'nama_logo_anda.png' dengan URL/logo gambar Anda -->
+            <div class="container">
+                <h1>Pelayanan Puskesmas Bagan Deli Belawan</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+
+    <section class="content">
+        <article>
+            <h2>Artikel Kesehatan Terbaru</h2>
+            <div class="article-preview">
+                <img src="Rokok elektrik.jpeg" alt="Gambar Artikel 2">
+                <h3><a href="https://www.halodoc.com/artikel/ini-bahaya-rokok-elektrik-bagi-anak">Bahaya Rokok elektrik untuk Kesehatan</a></h3>
+                <p> Rokok elektrik atau yang lebih dikenal juga dengan vape masih marak digunakan hingga saat ini, terutama di kalangan orang muda. Jenis rokok ini dianggap lebih aman daripada rokok tembakau, karena menggunakan bahan aerosol yang tidak selalu mengandung nikotin. Namun, tahukah kamu bahwa ketergantungan rokok elektrik tetap saja dapat berbahaya untuk kesehatan? Yuk, simak penjelasannya di bawah ini.</p>
+                <a href="https://www.halodoc.com/artikel/ketahui-bahaya-ketergantungan-rokok-elektrik-untuk-kesehatan">Baca Selengkapnya</a>
+            </div>
+        </article> 
+    </section>
+</body>
+<footer>
+    <p>&copy; 2023 KIHAT Layanan Cerdas Kesehatan</p>
+</footer>
+</html>
